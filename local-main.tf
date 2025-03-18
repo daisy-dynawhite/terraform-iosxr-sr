@@ -24,6 +24,11 @@ provider "iosxr" {
   alias = "SR-R2"
 }
 
+module "sr1"{
+  source = "./modules/iosxr_device"
+  providers = {iosxr = iosxr.SR-R1}
+}
+
 module "sr2"{
   source = "./modules/iosxr_device"
   providers = {iosxr = iosxr.SR-R2}

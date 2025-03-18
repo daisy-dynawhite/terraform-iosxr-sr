@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"sr2","Source":"./modules/iosxr_device","Dir":"modules/iosxr_device"}]}
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"sr1","Source":"./modules/iosxr_device","Dir":"modules/iosxr_device"},{"Key":"sr2","Source":"./modules/iosxr_device","Dir":"modules/iosxr_device"}]}
