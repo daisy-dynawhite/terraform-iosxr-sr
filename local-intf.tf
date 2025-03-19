@@ -128,7 +128,7 @@
         provider = iosxr.SR-RR
     }
         resource "iosxr_interface" "INT-RR1-Gi1"{
-        interface_name = "GigabitEthernet0/0/0/0"
+        interface_name = "GigabitEthernet0/0/0/1"
         description = "*** RR1 Gi1 - SR1 Gi0 ***"
         shutdown = false
         ipv4_address = "10.1.5.1"
