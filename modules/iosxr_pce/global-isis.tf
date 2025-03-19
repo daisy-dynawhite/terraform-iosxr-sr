@@ -1,6 +1,5 @@
 resource "iosxr_router_isis" "GLB-ISIS" {
   process_id = "1" 
-  is_type = "level-1"
 }
 
 resource "iosxr_router_isis_address_family" "GLB-ISIS-AF" {
