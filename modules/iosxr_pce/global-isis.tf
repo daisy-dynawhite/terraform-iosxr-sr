@@ -20,9 +20,3 @@ resource "iosxr_router_isis_interface_address_family" "GLB-ISIS-AF-Gi2"{
     af_name = "ipv4"
     saf_name = "unicast"
 }
-resource "iosxr_router_isis_interface_address_family" "GLB-ISIS-AF-Gi3"{
-    process_id = "1"
-    interface_name = "GigabitEthernet0/0/0/3"
-    af_name = "ipv4"
-    saf_name = "unicast"
-}

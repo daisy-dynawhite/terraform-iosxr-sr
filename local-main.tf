@@ -11,6 +11,14 @@ terraform {
 provider "iosxr" {
   username = "devadmin"
   password = "daisydev"
+  host    = "192.168.1.105"  
+  verify_certificate = false           
+  alias = "SR-RR"
+}
+
+provider "iosxr" {
+  username = "devadmin"
+  password = "daisydev"
   host    = "192.168.1.101"  
   verify_certificate = false           
   alias = "SR-R1"
@@ -38,11 +46,14 @@ provider "iosxr" {
   alias = "SR-R4"
 }
 
+module "rr1"{
+  source = "./modules/iosxr_pce"
+  providers = {iosxr = iosxr.SR-RR}
+}
 module "sr1"{
   source = "./modules/iosxr_device"
   providers = {iosxr = iosxr.SR-R1}
 }
-
 module "sr2"{
   source = "./modules/iosxr_device"
   providers = {iosxr = iosxr.SR-R2}
