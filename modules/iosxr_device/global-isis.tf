@@ -1,5 +1,6 @@
 resource "iosxr_router_isis" "GLB-ISIS" {
   process_id = "1" 
+  is_type = "level-1"
 }
 
 resource "iosxr_router_isis_address_family" "GLB-ISIS-AF" {
@@ -17,12 +18,6 @@ resource "iosxr_router_isis_interface_address_family" "GLB-ISIS-AF-Gi1"{
 resource "iosxr_router_isis_interface_address_family" "GLB-ISIS-AF-Gi2"{
     process_id = "1"
     interface_name = "GigabitEthernet0/0/0/2"
-    af_name = "ipv4"
-    saf_name = "unicast"
-}
-resource "iosxr_router_isis_interface_address_family" "GLB-ISIS-AF-Gi3"{
-    process_id = "1"
-    interface_name = "GigabitEthernet0/0/0/3"
     af_name = "ipv4"
     saf_name = "unicast"
 }
