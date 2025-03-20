@@ -10,20 +10,7 @@ resource "iosxr_segment_routing_te" "SR1-PCC" {
   } ]
   provider = iosxr.SR-R1
 }
-resource "iosxr_segment_routing_te" "SR2-PCC" {
-  pcc_source_address = "2.2.2.1"
-  pce_peers = [ {
-    pce_address = "5.5.5.1"
-  } ]
-  provider = iosxr.SR-R2
-}
-resource "iosxr_segment_routing_te" "SR3-PCC" {
-  pcc_source_address = "3.3.3.1"
-  pce_peers = [ {
-    pce_address = "5.5.5.1"
-  } ]
-  provider = iosxr.SR-R3
-}
+
 resource "iosxr_segment_routing_te" "SR4-PCC" {
   pcc_source_address = "4.4.4.1"
   pce_peers = [ {
